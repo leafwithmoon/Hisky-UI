@@ -42,7 +42,7 @@ module.exports = {
         //加载器配置
         loaders: [
             { test: /\.(css|less|scss)$/, loader: ExtractTextPlugin.extract('style', 'css!less!sass') },
-            { test: /\.(png|jpg)$/, loader:  'url-loader?limit=8192&name=build/[name].[ext]'  },
+            { test: /\.(png|jpg)$/, loader:  'url-loader?limit=8192&name=img/[name].[ext]'  },
             { test: /\.(js|jsx?)$/, exclude: /node_modules/, loader: 'babel-loader' }
         ]
     },

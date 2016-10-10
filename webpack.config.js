@@ -34,13 +34,15 @@ module.exports = {
     output: {
         path: __dirname,
         filename: 'build/[name].js',
-        chunkFilename: '[name].js'
+        chunkFilename: '[name].js',
+        hotUpdateChunkFilename: 'hot/hot-update.js',
+        hotUpdateMainFilename: 'hot/hot-update.json'
     },
     module: {
         //加载器配置
         loaders: [
             { test: /\.(css|less|scss)$/, loader: ExtractTextPlugin.extract('style', 'css!less!sass') },
-            { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192&name=build/[name].[ext]' },
+            { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192&name=build/img/[name].[ext]' },
             { test: /\.(js|jsx?)$/, exclude: /node_modules/, loaders: ['react-hot-loader/webpack','babel-loader'] }
         ]
     },
